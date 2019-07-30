@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Animation</title>
+<style>
+#image {
+  height: 116px;
+  width: 120px;
+  background: url('animation.png') 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+</style>
+</head>
+<body>
+<div id="animation">
+  <p id="image" onmouseover="animation()"> </p>
+</div>
+<script>
+var ani; 
+function animation() {
+
+var position = 116;
+const interval = 120;
+
+ani = setInterval ( () => {
+
+document.getElementById("image").style.backgroundPosition = `-${position}px 0px`; 
+
+if (position < 1536)
+{ 
+	position = position + 116;
+}
+else
+{ 
+	position = 120; 
+}}, interval );
+}
+</script>
+</body>
+</html>
